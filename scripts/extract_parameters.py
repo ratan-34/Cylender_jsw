@@ -9,6 +9,22 @@ from dotenv import load_dotenv
 from openai import AzureOpenAI
 
 
+try:
+    client = AzureOpenAI(
+        api_key="99pNnIIEnYGr7klUx9lre5slwp1AJ2WvjJJrtQsAHlvTBpQF7vZBJQQJ99BFACHYHv6XJ3w3AAAAACOG6WvB",
+        api_version="2024-06-01",
+        azure_endpoint="https://deepi-mbm2wweg-eastus2.cognitiveservices.azure.com"
+    )
+    deployment_name = "gpt-4o"
+    print("Azure OpenAI client initialized successfully")
+except Exception as e:
+    print(f"Error initializing Azure OpenAI client: {str(e)}")
+    client = None
+
+
+
+
+
 
 def encode_image_to_base64(image_bytes):
     """Encode image bytes to base64 for OpenAI API."""
