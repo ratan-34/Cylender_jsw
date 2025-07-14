@@ -6,3 +6,4 @@ PyMuPDF
 Pillow
 tabulate
 uvicorn
+openai
